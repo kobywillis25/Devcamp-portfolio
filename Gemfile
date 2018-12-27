@@ -62,4 +62,4 @@ gem 'rubysl-ostruct', '~> 2.0', '>= 2.0.4'
 gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 
-gem 'willis_view_tool', git: 'https://github.com/kobywillis25/willis_view_tool'
+gem 'kobys_view_tool', '~> 0.1.0'

@@ -17,6 +17,6 @@ module ApplicationHelper
  end 
 
   def copyright_generator
-  WillisViewTool::Renderer.copyright 'Koby Willis', 'All rights reserved'
+  KobysViewTool::Renderer.copyright 'Koby Willis', 'All rights reserved'
   end
 end

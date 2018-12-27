@@ -58,3 +58,6 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.5'
 gem 'rack', '~> 2.0', '>= 2.0.6'
 gem 'rubysl-ostruct', '~> 2.0', '>= 2.0.4'
+
+gem 'bootstrap', '~> 4.2.1'
+gem 'jquery-rails'

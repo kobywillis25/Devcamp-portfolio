@@ -7,7 +7,6 @@ set_positions = ->
     return
   return
 
-
 ready = ->
   set_positions()
   $('.sortable').sortable()
@@ -16,8 +15,8 @@ ready = ->
     set_positions()
     $('.card').each (i) ->
       updated_order.push
-        id: $('this').data('id')
-        positions: i + 1
+        id: $(this).data('id')
+        position: i + 1
       return
     $.ajax
       type: 'PUT'

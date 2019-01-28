@@ -26,14 +26,14 @@ class PortfoliosController < ApplicationController
   end
 
     def create
-@portfolio_item = Portfolio.new(portfolio_params)
+      @portfolio_item = Portfolio.new(portfolio_params)
 
-    respond_to do |format|
-      if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
-      else
-        format.html { render :new }
-      end
+      respond_to do |format|
+        if @portfolio_item.save
+          format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
+        else
+          format.html { render :new }
+        end
     end
   end
 
@@ -41,7 +41,6 @@ class PortfoliosController < ApplicationController
   end
 
   def update  
-    
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'The record was successfully updated.' }
@@ -71,7 +70,7 @@ class PortfoliosController < ApplicationController
                                       :subtitle, 
                                       :body,
                                       :main_image,
-                                      :thumb_image, 
+                                      :thumb_image,
                                       technologies_attributes: [:name]
                                       ) 
   end 

@@ -46,5 +46,9 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.6'
 gem 'cocoon', '~> 1.2', '>= 1.2.12'
 gem 'gritter', '~> 1.2'
+<<<<<<< HEAD
 gem 'twitter', '~> 6.2'
 gem 'redis', '~> 4.1'
+=======
+gem 'twitter', '~> 6.2'
+>>>>>>> ba9b02bc1d053c8030f35d6eb59a018f098e9f3c

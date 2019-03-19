@@ -1,14 +1,81 @@
-<h1>About Me</h1>
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
 
-<hr>
+    <hr>
 
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag "profile.jpg", width: 300, alt: "profile image" %>
-  </div>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "profile.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
 
-  <div class="col-md-8">
-<p>Youngest of four brothers. Born in American Fork, Utah in 1997. Brothers are Tyson, Jesse, and Zac. Parents are Mark and Sonya. </p>
-<p>Born in American Fork, Utah. Grew up doing all things outdoors, hunting, fishing, dirtbikes, camping, etc. Along with all the outdoor activities managed to play football and baseball.</p>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilizedinteger %>"
+                  aria-valuemax="100"
+                  style="width: <%=skill.percent_utilizedinteger %>%"
+                ></div>
+            </div>
+          </div>
+
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <p>Youngest of four brothers. Born in American Fork, Utah in 1997. Brothers are Tyson, Jesse, and Zac. Parents are Mark and Sonya. </p>
+        <p>Born in American Fork, Utah. Grew up doing all things outdoors, hunting, fishing, dirtbikes, camping, etc. Along with all the outdoor activities managed to play football and baseball.</p>
+
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#jobHistory"
+            aria-expanded="false"
+            aria-controler="jobHistory"
+          >
+            Job History
+          </button>
+
+          <button
+            class="btn btn-warning"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controler="education"
+          >
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="jobHistory">
+            <div class="card card-block">
+              Job 1
+            </div>
+            <div class="card card-block">
+              Job 2
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              School 1
+            </div>
+            <div class="card card-block">
+              School 2
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
+

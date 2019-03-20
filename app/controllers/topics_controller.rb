@@ -14,7 +14,7 @@ class TopicsController < ApplicationController
       @blogs = @topic.blogs.published.recent.page(params[:page]).per(5)
     end
   end
-end
+
 
 private
 
